@@ -15,7 +15,7 @@ RUN adduser \
     --uid "${UID}" \    
     "${USER}"
 
-RUN apk update && apk add --no-cache git ca-certificates && update-ca-certificates curl && \
+RUN apk update && apk add --no-cache git ca-certificates curl && update-ca-certificates && \
     curl -L ${RELEASE_ROOT}/${RELEASE_FILE} | tar xvz && \
     mv linux-amd64/helm /usr/bin/helm && \
     chmod +x /usr/bin/helm
