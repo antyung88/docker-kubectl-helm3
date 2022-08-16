@@ -1,4 +1,4 @@
-FROM alpine:latest AS helm
+FROM alpine:latest AS builder
 
 ENV HELM_VERSION=3.9.3
 ENV RELEASE_ROOT="https://get.helm.sh"
@@ -34,7 +34,7 @@ COPY --from=builder /etc/passwd /etc/passwd
 COPY --from=builder /etc/group /etc/group
 
 # kubectl helm
-COPY --from=helm /usr/bin/helm /usr/bin/helm3
+COPY --from=builder /usr/bin/helm /usr/bin/helm3
 COPY --from=bitnami/kubectl:latest /opt/bitnami/kubectl/bin/kubectl /usr/bin/kubectl
 
 USER scratchuser:scratchuser
