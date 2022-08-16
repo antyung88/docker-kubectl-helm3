@@ -13,10 +13,6 @@ FROM ghcr.io/antyung88/deepin:apricot
 
 ENV PATH="/usr/bin:${PATH}"
 
-# BusyBox Static Binary
-COPY --from=ghcr.io/antyung88/scratch-sh:stable /lib /lib
-COPY --from=ghcr.io/antyung88/scratch-sh:stable /bin /bin
-
 # KUBECTL HELM
 COPY --from=helm /usr/bin/helm /usr/bin/helm3
 COPY --from=bitnami/kubectl:latest /opt/bitnami/kubectl/bin/kubectl /usr/bin/kubectl
