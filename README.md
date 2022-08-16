@@ -12,7 +12,7 @@ docker run ghcr.io/antyung88/kubectl-helm:latest kubectl
 
 Execute helm
 ```
-docker run ghcr.io/antyung88/kubectl-helm:latest helm
+docker run ghcr.io/antyung88/kubectl-helm:latest helm3
 ```
 
 # GitLab Usage Instructions
@@ -30,6 +30,6 @@ kubectl:
     - kubectl config use-context <repo_path>:<agent_name>
     # Basic Commands
     - kubectl get pods -A
-    - helm list --all-namespaces
+    - helm3 list --all-namespaces
   when: manual
 ```
