@@ -37,5 +37,5 @@ COPY --from=builder /etc/group /etc/group
 COPY --from=builder /usr/bin/helm /usr/bin/helm3
 COPY --from=bitnami/kubectl:latest /opt/bitnami/kubectl/bin/kubectl /usr/bin/kubectl
 
-RUN mkdir -p /home/scratchuser
+RUN mkdir -p /home/scratchuser && chown scratchuser: /home/scratchuser
 USER scratchuser:scratchuser
