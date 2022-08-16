@@ -9,7 +9,7 @@ ENV UID=10001
 RUN adduser \    
     --disabled-password \    
     --gecos "" \    
-    --home "/scratchuser" \    
+    --home "/home/scratchuser" \    
     --shell "/sbin/nologin" \    
     --no-create-home \    
     --uid "${UID}" \    
