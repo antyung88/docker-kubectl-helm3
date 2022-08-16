@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install curl -y && \
     mv linux-amd64/helm /usr/bin/helm && \
     chmod +x /usr/bin/helm
 
-FROM scratch
+FROM ghcr.io/antyung88/deepin:apricot
 
 ENV PATH="/usr/bin:${PATH}"
 
