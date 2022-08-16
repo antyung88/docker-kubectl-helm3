@@ -3,6 +3,11 @@ Container image with kubectl &amp; helm3 for CI/CD
 
 This docker image contains Helm CLI and kubectl.
 
+```
+REPOSITORY                       TAG       IMAGE ID       CREATED         SIZE
+ghcr.io/antyung88/kubectl-helm   latest    e06f7c6bfd58   1 minute ago    93.7MB
+```
+
 # Basic Usage Instructions
 
 Execute kubectl
