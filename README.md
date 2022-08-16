@@ -1,4 +1,4 @@
-# docker-kubectl-helm3
+# docker-kubectl-helm3 [![Release Github Packages](https://github.com/antyung88/docker-kubectl-helm3/actions/workflows/release.yml/badge.svg)](https://github.com/antyung88/docker-kubectl-helm3/actions/workflows/release.yml)
 Container image with kubectl &amp; helm3 for CI/CD
 
 This docker image contains Helm CLI and kubectl.
