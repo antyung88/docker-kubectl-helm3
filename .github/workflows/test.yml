@@ -1,0 +1,21 @@
+name: Test Image
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  test-image:
+    name: Build Stable Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out Repo 
+        uses: actions/checkout@v3
+      - uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.GH_TOKEN }}
+      - run: |
+          docker build . -t ghcr.io/${{ secrets.USER }}/${{ secrets.IMAGE }}:test
