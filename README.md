@@ -20,6 +20,22 @@ Execute helm
 docker run ghcr.io/antyung88/kubectl-helm:latest helm3
 ```
 
+# Alias Without Installation
+Insert in ~/.bashrc or ~/.zshrc
+```
+alias kubectl='docker run ghcr.io/antyung88/kubectl-helm:latest kubectl'
+alias helm3='docker run ghcr.io/antyung88/kubectl-helm:latest helm3'
+```
+
+# Quick Installation
+Install kubectl & helm3
+```
+docker create -ti --name kubectl-helm ghcr.io/antyung88/kubectl-helm:latest bash && \
+sudo docker cp kubectl-helm:/usr/bin/kubectl /usr/bin/kubectl && \
+sudo docker cp kubectl-helm:/usr/bin/helm3 /usr/bin/helm3 && \
+docker rm -f kubectl-helm
+```
+
 # GitLab Usage Instructions
 
 - [Gitlab Agent Installed](https://gitlab.com/gitlab-org/charts/gitlab-agent)
