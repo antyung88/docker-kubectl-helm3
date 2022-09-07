@@ -36,6 +36,18 @@ sudo docker cp kubectl-helm:/usr/bin/helm3 /usr/bin/helm3 && \
 docker rm -f kubectl-helm
 ```
 
+Verify
+```
+which /usr/bin/kubectl
+which /usr/bin/helm3
+```
+
+Uninstall
+```
+sudo rm /usr/bin/kubectl
+sudo rm /usr/bin/helm3
+```
+
 # GitLab Usage Instructions
 
 - [Gitlab Agent Installed](https://gitlab.com/gitlab-org/charts/gitlab-agent)
