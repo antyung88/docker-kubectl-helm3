@@ -20,13 +20,6 @@ Execute helm
 docker run ghcr.io/antyung88/kubectl-helm:latest helm3
 ```
 
-# Alias Without Installation
-Insert in ~/.bashrc or ~/.zshrc
-```
-alias kubectl='docker run ghcr.io/antyung88/kubectl-helm:latest kubectl'
-alias helm3='docker run ghcr.io/antyung88/kubectl-helm:latest helm3'
-```
-
 # Quick Installation
 Install kubectl & helm3
 ```
